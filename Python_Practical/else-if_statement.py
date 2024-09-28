@@ -9,7 +9,7 @@ else:
     print("The letter is not A, B, or C")
 
 
-letter = "B"
+letter = "F"
 if letter == "B":
     print("The letter is B")
 elif letter == "C":
@@ -19,7 +19,7 @@ elif letter == "A":
 else:
     print("The letter is not A, B, or C")
 
-    
+
 letter = "C"
 if letter == "B":
     print("The letter is B")
