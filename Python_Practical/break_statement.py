@@ -6,6 +6,7 @@
 
 # Own Code
 # Print prime numbers
+# Python program to display all the prime numbers within an interval
 
 lower = 0
 upper = 100
