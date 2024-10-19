@@ -1,12 +1,34 @@
-def calculate_statistics(numbers):
-    total_sum = sum(numbers)
-    count = len(numbers)
-    maximum = max(numbers)
-    mean = total_sum / count if count > 0 else 0
+from collections import Counter
 
-    return total_sum, mean, maximum
-numbers = [10, 20, 30, 40, 50]
-total_sum, mean, maximum = calculate_statistics(numbers)
+def calculate_statistics(numbers):
+    if not numbers:
+        return None, None, None, None, None
+    
+    # Calculate sum
+    total_sum = sum(numbers)
+    
+    # Calculate minimum
+    minimum = min(numbers)
+    
+    # Calculate maximum
+    maximum = max(numbers)
+    
+    # Calculate mean
+    mean = total_sum / len(numbers)
+    
+    # Calculate mode
+    frequency = Counter(numbers)
+    mode_data = frequency.most_common()
+    mode = [num for num, freq in mode_data if freq == mode_data[0][1]]
+    
+    return total_sum, minimum, maximum, mean, mode
+
+# Example usage
+numbers = [1, 2, 2, 3, 4, 4, 4, 5]
+total_sum, minimum, maximum, mean, mode = calculate_statistics(numbers)
+
 print(f"Sum: {total_sum}")
-print(f"Mean: {mean:.2f}")
-print(f"Maximum: {maximum}")
+print(f"Min: {minimum}")
+print(f"Max: {maximum}")
+print(f"Mean: {mean}")
+print(f"Mode: {mode}")
