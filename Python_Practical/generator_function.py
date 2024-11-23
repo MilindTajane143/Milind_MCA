@@ -5,6 +5,5 @@ def square_generator():
 
 # Use the generator function
 if __name__ == "__main__":
-    print("Squares of numbers from 1 to 10:")
-    for square in square_generator():
-        print(square)
+    for line_number, square in enumerate(square_generator(), start=1):
+        print(f"Square Of {line_number} = {square}")
