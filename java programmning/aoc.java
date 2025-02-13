@@ -11,7 +11,7 @@ public class aoc{
         {
             int nu=22, de=7;
             float area = (float)nu/de*radius*radius;
-        System.out.println("Area of circle is " + area +" sq. units");
+        System.out.println("Area of circle is " + area +" sq.units");
         }
     }
 }
